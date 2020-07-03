@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar class="toolbar-top">
-          <IonTitle>Craig's Donors</IonTitle>          
+          <IonTitle>Craig's Donors - Testing Changes</IonTitle>          
           {/* <IonTitle><img alt="logo" id="header_logo" height="40" float-left src="../assets/images/CD.png"/>Craig's Donors</IonTitle> */}
           {/* <IonTitle><IonImg alt="Craigs Logo" src="../assests/images/CDN.png" />Craigs Donors</IonTitle> */}
           <IonButtons slot="secondary">
