@@ -7,7 +7,7 @@ import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
 import TrendingPage from './pages/TrendingPage'
 
-import Amplify, { Auth } from 'aws-amplify';
+// import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 /* Core CSS required for Ionic components to work properly */
@@ -28,7 +28,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-Amplify.configure(awsconfig);
+// Amplify.configure(awsconfig);
 
 const App: React.FC = () => (
 

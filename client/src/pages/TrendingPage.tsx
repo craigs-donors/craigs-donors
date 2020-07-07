@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom';
 import './DonatePage.css';
 import TrendingContainer from '../components/TrendingContainer';
 import FooterContainer from '../components/FooterContainer';
+import CreateCommunityContainer from '../components/CreateCommunityContainer';
 
 const DonatePage: React.FC = () => {
   return (
@@ -44,6 +45,9 @@ const DonatePage: React.FC = () => {
       
       {/* Footer container here */}
       <FooterContainer/>      
+      
+      {/* Community container here */}
+      <CreateCommunityContainer/> 
 
     </IonPage>
   );
