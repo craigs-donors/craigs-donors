@@ -42,15 +42,15 @@ const App: React.FC = () => (
 
         {/* Testing of the Donate Page */}
         <Route path="/donatepage" component={DonatePage} exact={true} />
-        <Route exact path="/donatepage" render={() => <Redirect to="/donatepage" />} />
+        <Route exact path="/" render={() => <Redirect to="/donatepage" />} />
 
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
-        <Route exact path="/donateconfirmpage" render={() => <Redirect to="/donateconfirmpage" />} />        
+        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />        
 
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
-        <Route exact path="/trendingpage" render={() => <Redirect to="/trendingpage" />} />        
+        <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
 
 
 

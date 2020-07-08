@@ -18,11 +18,11 @@ const TrendingPage: React.FC = () => {
     <IonPage>
       <IonHeader translucent={true}>
         <IonToolbar class="toolbar-top">
-          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="115" height="55" float-left src="./assets/images/CD.png"/></IonTitle>
+          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
 
           <IonButtons slot="secondary">
-            <IonButton color="primary" expand="block" fill="clear">Donate</IonButton>
-            <IonButton color="secondary" expand="block" fill="clear">Community</IonButton>
+          <IonButton color="primary" expand="block" fill="clear" routerLink="/donateconfirmpage">Donate</IonButton>
+            <IonButton color="secondary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
             <IonButton color="tertiary" expand="block" fill="clear">Support</IonButton>
           </IonButtons>
 
