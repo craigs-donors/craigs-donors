@@ -7,7 +7,7 @@ import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
 import TrendingPage from './pages/TrendingPage'
 
-// import Amplify, { Auth } from 'aws-amplify';
+import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 /* Core CSS required for Ionic components to work properly */
@@ -28,7 +28,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-// Amplify.configure(awsconfig);
+Amplify.configure(awsconfig);
 
 const App: React.FC = () => (
 
@@ -38,20 +38,19 @@ const App: React.FC = () => (
 
         {/* Testing of the Home Page */}
         <Route path="/home" component={Home} exact={true} />
-
         <Route exact path="/" render={() => <Redirect to="/home" />} />
 
         {/* Testing of the Donate Page */}
         <Route path="/donatepage" component={DonatePage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/donatepage" />} />
+        <Route exact path="/donatepage" render={() => <Redirect to="/donatepage" />} />
 
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />        
+        <Route exact path="/donateconfirmpage" render={() => <Redirect to="/donateconfirmpage" />} />        
 
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
+        <Route exact path="/trendingpage" render={() => <Redirect to="/trendingpage" />} />        
 
 
 
