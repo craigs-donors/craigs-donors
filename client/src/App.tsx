@@ -38,7 +38,6 @@ const App: React.FC = () => (
 
         {/* Testing of the Home Page */}
         <Route path="/home" component={Home} exact={true} />
-
         <Route exact path="/" render={() => <Redirect to="/home" />} />
 
         {/* Testing of the Donate Page */}
