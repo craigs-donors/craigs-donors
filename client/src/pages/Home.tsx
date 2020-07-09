@@ -46,13 +46,7 @@ const Home: React.FC = () => {
           {/* NB: Amplify Authenticator code   */}
           <AmplifyAuthenticator federated={federated}>
               <div>                                
-                You are signed in!
-                <IonToast
-                  isOpen={showToast1}
-                  onDidDismiss={() => setShowToast1(false)}
-                  message="Welcome to Craigs Donors!"
-                  duration={200}
-                />                
+                You are signed in!               
                 <AmplifySignOut />
               </div>
           </AmplifyAuthenticator>
