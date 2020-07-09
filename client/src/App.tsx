@@ -48,8 +48,7 @@ const App: React.FC = () => (
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />    
 
-        <Route path="/signin" component={SignIn} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/signin" />} />   
+        <Route path="/signin" component={SignIn} exact={true} />  
         
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
