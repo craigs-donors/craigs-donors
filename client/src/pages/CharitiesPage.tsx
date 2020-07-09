@@ -8,13 +8,28 @@ interface CharitiesPageProps {
 };
 
 const CharitiesPage: React.FC<CharitiesPageProps> = props => {
-    
+    const orgIDs = [
+        6026,
+        6616,
+        7713,
+        7716,
+        7770,
+        8982,
+        12100,
+        12270,
+        14732,
+        17460,
+        17765
+    ]
     return (
         <Fragment>
-            <CharityPanelContainer orgID={6026}>
-            </CharityPanelContainer>
-            <CharityPanelContainer orgID={6616}>
-            </CharityPanelContainer>
+            <ul>
+            {orgIDs.map((elem,index) => 
+                <li key={index}>
+                <CharityPanelContainer orgID={elem}></CharityPanelContainer>
+                </li>
+            )}
+            </ul>
         </Fragment>
     );
 }
