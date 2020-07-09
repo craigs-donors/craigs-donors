@@ -5,8 +5,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
-import TrendingPage from './pages/TrendingPage'
-
+import TrendingPage from './pages/TrendingPage';
+import SignIn from './pages/SignIn';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
@@ -46,13 +46,16 @@ const App: React.FC = () => (
 
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />        
+        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />    
 
+        <Route path="/signin" component={SignIn} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/signin" />} />   
+        
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
 
-
+ 
 
       </IonRouterOutlet>
     </IonReactRouter>

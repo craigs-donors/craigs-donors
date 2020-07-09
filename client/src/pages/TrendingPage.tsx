@@ -13,6 +13,8 @@ import TrendingContainer from '../components/TrendingContainer';
 import FooterContainer from '../components/FooterContainer';
 import CreateCommunityContainer from '../components/CreateCommunityContainer';
 
+
+
 const TrendingPage: React.FC = () => {
   return (
     <IonPage>
@@ -30,9 +32,9 @@ const TrendingPage: React.FC = () => {
             <IonButton fill="clear">
             <IonIcon slot="start" icon={notifications} />
             </IonButton>
-            <IonButton size="large" fill="solid" color="tertiary">
-              James Cook
-            </IonButton>                        
+            <IonButton size="large" fill="solid" color="tertiary" type="submit" href="/signIn">
+              Sign in/Register
+            </IonButton>                       
           </IonButtons>
         </IonToolbar>
       </IonHeader>
