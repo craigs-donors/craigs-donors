@@ -12,11 +12,12 @@ import './TrendingPage.css';
 import TrendingContainer from '../components/TrendingContainer';
 import FooterContainer from '../components/FooterContainer';
 import CreateCommunityContainer from '../components/CreateCommunityContainer';
-
+import SignInContainer from '../components/SigninContainer';
 
 
 const TrendingPage: React.FC = () => {
   return (
+    
     <IonPage>
       <IonHeader translucent={true}>
         <IonToolbar class="toolbar-top">
@@ -32,15 +33,13 @@ const TrendingPage: React.FC = () => {
             <IonButton fill="clear">
             <IonIcon slot="start" icon={notifications} />
             </IonButton>
-            <IonButton size="large" fill="solid" color="tertiary" type="submit" href="/signIn">
-              Sign in/Register
-            </IonButton>                       
           </IonButtons>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>                                
         {/* NB: Trending Items here */}
+        <SignInContainer/>
         <TrendingContainer/>
 
 
@@ -90,11 +89,11 @@ const TrendingPage: React.FC = () => {
             <IonCol class="col-style"><IonText color="warning">Can't find your community?!</IonText> <IonText color="tertiary">Create your own!</IonText></IonCol>
           </IonRow>
 
-        </IonGrid>        
+        </IonGrid>  
+             
 
         {/* NB: Create commmunity container here */}
         <CreateCommunityContainer />
-
       </IonContent>
       
       {/* NB: Footer container here */}

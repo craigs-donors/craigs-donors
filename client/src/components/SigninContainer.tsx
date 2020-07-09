@@ -4,29 +4,36 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIco
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
   medkit, colorFill, heartHalf , languageSharp} from 'ionicons/icons';
+import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from '../aws-exports';
+Amplify.configure(awsconfig);
 
 interface ContainerProps { }
 
+const federated = {
+  facebookAppId: '3278049522251731',
+  googleClientId: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
+  amazonClientId: '2p0l7o2lcnst4g39v9ktomaafp'
+};
+
 const SignInContainer: React.FC<ContainerProps> = () => {
   return (
-    <IonFooter>
-    <IonToolbar class="page-footer">      
-      <IonRow>
-        <IonCol>
-          <IonButton color="light" expand="block" fill="clear">Privacy</IonButton>
-        </IonCol>
-        <IonCol>
-          <IonButton color="light" expand="block" fill="clear">Sitemap</IonButton>
-        </IonCol>
-        <IonCol>
-          <IonButton color="light" expand="block" fill="clear">Terms</IonButton>
-        </IonCol>
-        <IonCol>
-          <IonButton color="light" expand="block" fill="clear">Help</IonButton>
-        </IonCol>                              
-      </IonRow>
-    </IonToolbar>
-  </IonFooter>
+    <IonGrid>
+    <IonRow>
+      <IonCol size="8" offset="4" className="ion-align-self-center">
+  
+      {/* NB: Amplify Authenticator code   */}
+      <AmplifyAuthenticator federated={federated}>
+          <div>                                              
+            <AmplifySignOut />
+          </div>
+      </AmplifyAuthenticator>
+  
+      </IonCol>
+    </IonRow>
+      </IonGrid>
 
   );
 };

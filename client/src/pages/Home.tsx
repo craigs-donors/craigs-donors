@@ -31,6 +31,9 @@ const Home: React.FC = () => {
             <IonButton color="primary" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>
             <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
             <IonButton color="tertiary" expand="block" fill="clear">About Us</IonButton>
+            <IonButton size="large" fill="solid" color="tertiary" type="submit" href="/trendingpage">
+              Sign in/Register
+            </IonButton> 
           </IonButtons>
         </IonToolbar>
       </IonHeader>
