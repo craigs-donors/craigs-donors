@@ -5,7 +5,10 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
-import TrendingPage from './pages/TrendingPage'
+import TrendingPage from './pages/TrendingPage';
+import AboutPage from './pages/AboutPage'; 
+import CharitiesPage from './pages/CharitiesPage';
+
 
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
@@ -36,10 +39,6 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
 
-        {/* Testing of the Home Page */}
-        <Route path="/home" component={Home} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
-
         {/* Testing of the Donate Page */}
         <Route path="/donatepage" component={DonatePage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/donatepage" />} />
@@ -48,9 +47,21 @@ const App: React.FC = () => (
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />        
 
-        {/* Testing of the Donate Confirmation Page */}
+        {/* Testing of the Trending Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
+
+        {/* Testing of the Donate Confirmation Page */}
+        <Route path="/aboutpage" component={AboutPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/aboutpage" />} />                
+
+        {/* Testing of the Donate Confirmation Page */}
+        <Route path="/charitiespage" component={CharitiesPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/charitiespage" />} />        
+
+        {/* Testing of the Home Page */}
+        <Route path="/home" component={Home} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />                        
 
 
 

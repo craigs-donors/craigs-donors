@@ -2,7 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIco
   IonItem, IonCard, IonCardContent, IonCardTitle, IonLabel, IonInput, IonImg } from '@ionic/react';
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
-  medkit, colorFill, heartHalf , languageSharp, notifications } from 'ionicons/icons';
+  medkit, colorFill, heartHalf , languageSharp, notifications, logoAmazon } from 'ionicons/icons';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -21,7 +21,7 @@ const DonatePage: React.FC = () => {
           <IonButtons slot="secondary">
             <IonButton color="primary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
             <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
-            <IonButton color="tertiary" expand="block" fill="clear">Support</IonButton>
+            <IonButton color="tertiary" expand="block" fill="clear" routerLink="/aboutpage">About Us</IonButton>
           </IonButtons>
 
           <IonButtons slot="primary">
@@ -46,17 +46,29 @@ const DonatePage: React.FC = () => {
               <IonCol></IonCol>              
             </IonRow>
             <IonRow class="row-style">
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$5</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$10</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$20</IonButton></IonCol>              
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_5.html">$5</IonButton></IonCol>
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$10</IonButton></IonCol>
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_20.html">$20</IonButton></IonCol>              
             </IonRow>
             <IonRow class="row-style">
-            <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$50</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$100</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$200</IonButton></IonCol>              
+            <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_50.html">$50</IonButton></IonCol>
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_100.html">$100</IonButton></IonCol>
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_200.html">$200</IonButton></IonCol>              
             </IonRow>            
             <IonRow class="row-style">              
-              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="warning" routerLink="/donateconfirmpage">Pay with Amazon Pay</IonButton></IonCol>
+              <IonCol class="col-style" size="4" offset="4" >
+                <IonButton size="large" color="warning" routerLink="/donateconfirmpage">
+                <IonIcon slot="start" icon={logoAmazon} />Pay with Amazon Pay
+                </IonButton>
+              </IonCol>
+              {/* <IonCol class="col-style" size="4" offset="4" >
+                <IonButton size="large" color="warning" href="./assets/external/amazonpay.html">
+                <IonIcon slot="start" icon={logoAmazon} />Pay with Amazon Pay
+                </IonButton>
+              </IonCol>               */}
+
+              
+
             </IonRow>                        
           </IonGrid>
 

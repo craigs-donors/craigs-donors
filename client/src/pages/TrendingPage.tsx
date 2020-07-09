@@ -21,9 +21,9 @@ const TrendingPage: React.FC = () => {
           <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
 
           <IonButtons slot="secondary">
-          <IonButton color="primary" expand="block" fill="clear" routerLink="/donateconfirmpage">Donate</IonButton>
+          <IonButton color="primary" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>
             <IonButton color="secondary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
-            <IonButton color="tertiary" expand="block" fill="clear">Support</IonButton>
+            <IonButton color="tertiary" expand="block" fill="clear" routerLink="/aboutpage">About Us</IonButton>
           </IonButtons>
 
           <IonButtons slot="primary">
