@@ -1,9 +1,7 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIcon, IonButtons, IonList, 
-  IonItem, IonCard, IonCardContent, IonCardTitle, IonLabel, IonInput, IonImg, IonListHeader } from '@ionic/react';
-import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
-import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
-  medkit, colorFill, heartHalf , languageSharp} from 'ionicons/icons';
+
+import { IonGrid, IonRow, IonCol, IonButton} from '@ionic/react';
+
 import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 import Amplify, { Auth } from 'aws-amplify';
@@ -17,30 +15,72 @@ const federated = {
   googleClientId: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
   amazonClientId: '2p0l7o2lcnst4g39v9ktomaafp'
 };
+interface Props {
 
-const SignInContainer: React.FC<ContainerProps> = () => {
-  return (
+}
+interface State {
+  isOpen: boolean,
+  userName: string
+}
+
+export default class Menu extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false,
+      userName: ""
+
+    };
+  }
+async getState() {
+  try {
+    const user = await Auth.currentAuthenticatedUser()
+    console.log(user.username);
+    this.setState({ userName: user.username });
+  } catch(e) {
+    console.error(e)
+    console.log("no user")
+    this.setState({ userName: "No User" });
+  }
+};
+componentDidMount() {
+  this.getState();
+}
+toggle() {
+  this.setState({
+    isOpen: !this.state.isOpen
+  });
+}
+signOut = () => {
+  Auth.signOut()
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+}
+
+render(){
+  return(
     <IonGrid>
     <IonRow>
       <IonCol size="8" offset="4" className="ion-align-self-center">
   
       {/* NB: Amplify Authenticator code   */}
       <AmplifyAuthenticator federated={federated}>
-          <div>                                              
-            <AmplifySignOut />
+          <div> 
+
+          <IonButton color="warning" size="large" onClick={this.signOut}>Sign Out</IonButton>                                        
+            {/* <AmplifySignOut />  */}
+            {this.state.userName}
           </div>
       </AmplifyAuthenticator>
   
       </IonCol>
     </IonRow>
       </IonGrid>
-
-  );
-};
-
-export default SignInContainer;
-
-
+  )
+}
+}
 
 
 
