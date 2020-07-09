@@ -12,15 +12,10 @@ import SignInContainer from '../components/SigninContainer';
 const TrendingPage: React.FC = () => {
   return (
     
-    <IonPage>
-
-      
+    <IonPage> 
       <IonContent>                                
         {/* NB: Trending Items here */}
-        <SignInContainer/>
-        <TrendingContainer/>
         
-
         <IonGrid>
           <IonRow class="row-style">
             <IonCol class="col-style"><IonText color="warning">Join</IonText> <IonText color="tertiary">Community</IonText></IonCol>
@@ -72,6 +67,7 @@ const TrendingPage: React.FC = () => {
 
         {/* NB: Create commmunity container here */}
         <CreateCommunityContainer />
+
       </IonContent>
       
       {/* NB: Footer container here */}
