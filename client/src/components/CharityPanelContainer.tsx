@@ -8,21 +8,22 @@ interface ContainerProps {
 
 }
 
-const CharityPanelContainer: React.FC<ContainerProps> = props => {
+const GetCharityData: React.FC<ContainerProps> = props => {
 
   const [ data, setData ] = useState(undefined);
   const [ error, setError ] = useState(undefined);
   
-  !(data || error) && charity.getById(6026)
-    .then(result => result.json())
-    .then(setData)
-    .catch(setError);
+  !(data || error) && charity.getById(6026).then(setData).catch(setError);
   
+  return data ? data.organization.charityName : (error ? error : "undefined");
+};
+
+const CharityPanelContainer: React.FC<ContainerProps> = props => {
   return (
     <Fragment>
-      <p>Data is {data ? data.organization.charityName : "undefined"}</p>
+      Data is <GetCharityData> </GetCharityData>
     </Fragment>
   );
-};
+}
 
 export default CharityPanelContainer;
