@@ -4,10 +4,6 @@ import './CharityPanelContainer.css';
 import charity  from '../api/charity';
 import cause from '../api/cause';
 
-interface ContainerProps {
-  data: object
-};
-
 interface CharityPanelContainerProps {
   orgID: number
 }
@@ -25,21 +21,11 @@ const CharityPanelContainer: React.FC<CharityPanelContainerProps> = props => {
   
   return (
     <Fragment>
-      {handleRender(data, error, 'charityName')}
-      <p></p>
-      {handleRender(data, error, 'mission')}
+      <h1>{handleRender(data, error, 'charityName')}</h1>
+      <p>{handleRender(data, error, 'mission')}</p>
+      <button>Donate</button>
     </Fragment>
     );
 };
 
-// TEST bench for the above component. When done testing, default export must be CharityPanelContainer.
-const CharityPage: React.FC<ContainerProps> = props => {
-  return (
-    <Fragment>
-      <CharityPanelContainer orgID={6026}>
-      </CharityPanelContainer>
-    </Fragment>
-  );
-}
-
-export default CharityPage;
+export default CharityPanelContainer;
