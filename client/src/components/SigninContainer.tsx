@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { IonGrid, IonRow, IonCol, IonButton} from '@ionic/react';
-
+import { IonGrid, IonRow, IonCol, IonButton, IonToolbar, IonHeader, IonTitle, IonButtons, IonIcon} from '@ionic/react';
 import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 import Amplify, { Auth } from 'aws-amplify';
@@ -62,21 +61,32 @@ signOut = () => {
 render(){
   return(
     <IonGrid>
-    <IonRow>
-      <IonCol size="8" offset="4" className="ion-align-self-center">
-  
+    <IonHeader translucent={true}>
+    <IonToolbar class="toolbar-top">
+    <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
+    <IonButtons slot="secondary">
+    <IonButton color="primary" expand="block" fill="clear" routerLink="/donateconfirmpage">Donate</IonButton>
+    <IonButton color="secondary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
+    <IonButton color="tertiary" expand="block" fill="clear">Support</IonButton>
+    </IonButtons>
+    <IonButtons slot="primary">
+    <IonButton color="warning" size="large" fill="solid" onClick={this.signOut} href="/home">Sign Out</IonButton> 
+    </IonButtons>
+    </IonToolbar>
+    </IonHeader>
       {/* NB: Amplify Authenticator code   */}
-      <AmplifyAuthenticator federated={federated}>
-          <div> 
-
-          <IonButton color="warning" size="large" onClick={this.signOut}>Sign Out</IonButton>                                        
-            {/* <AmplifySignOut />  */}
-            {this.state.userName}
-          </div>
-      </AmplifyAuthenticator>
-  
-      </IonCol>
-    </IonRow>
+      <IonGrid>
+        <IonRow>
+          <IonCol size="8" offset="4" className="ion-align-self-center">
+          {/* NB: Amplify Authenticator code   */}
+          <AmplifyAuthenticator federated={federated}>
+              <div>                                
+                You are signed in! {this.state.userName}
+              </div>
+              </AmplifyAuthenticator>
+          </IonCol>
+        </IonRow>
+        </IonGrid> 
       </IonGrid>
   )
 }
