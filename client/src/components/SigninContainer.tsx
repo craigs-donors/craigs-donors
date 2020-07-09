@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { IonGrid, IonRow, IonCol, IonButton, IonToolbar, IonHeader, IonTitle, IonButtons, IonIcon} from '@ionic/react';
-import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { AmplifyAuthenticator, AmplifySignOut, AmplifySignUp, AmplifySignIn } from '@aws-amplify/ui-react';
 
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from '../aws-exports';
-import TrendingContainer from '../components/TrendingContainer';
+import TrendingContainer from './TrendingContainer';
 Amplify.configure(awsconfig);
 
 interface ContainerProps { }
@@ -67,13 +67,9 @@ render(){
         <IonRow>
           <IonCol size="8" offset="4" className="ion-align-self-center">
           {/* NB: Amplify Authenticator code   */}
-          <AmplifyAuthenticator federated={federated}>
-                
-                <TrendingContainer></TrendingContainer> 
-                <IonButton color="warning" size="large" fill="solid" onClick={this.signOut} href="/home">Sign Out {this.state.userName} </IonButton>                         
-                You are signed in! 
-              
-              </AmplifyAuthenticator>
+          <AmplifyAuthenticator federated={federated} usernameAlias="email">
+
+    </AmplifyAuthenticator>
           </IonCol>
         </IonRow>
         </IonGrid> 
