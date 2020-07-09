@@ -5,29 +5,41 @@ import charity  from '../api/charity';
 import cause from '../api/cause';
 
 interface ContainerProps {
-
+  data: object
 };
 
-interface GetCharityDataProps {
+interface CharityPanelContainerProps {
   orgID: number
 }
 
-const GetCharityData: React.FC<GetCharityDataProps> = props => {
+const handleRender = (data, err, field) => {
+  return data ? data[field] : (err ? err : "undefined. loading...")
+}
+
+const CharityPanelContainer: React.FC<CharityPanelContainerProps> = props => {
 
   const [ data, setData ] = useState(undefined);
   const [ error, setError ] = useState(undefined);
   
   !(data || error) && charity.getById(props.orgID).then(setData).catch(setError);
   
-  return data ? data.organization.charityName : (error ? error : "undefined");
-};
-
-const CharityPanelContainer: React.FC<ContainerProps> = props => {
   return (
     <Fragment>
-      Data is <GetCharityData orgID={6026}> </GetCharityData>
+      {handleRender(data, error, 'charityName')}
+      <p></p>
+      {handleRender(data, error, 'mission')}
+    </Fragment>
+    );
+};
+
+// TEST bench for the above component. When done testing, default export must be CharityPanelContainer.
+const CharityPage: React.FC<ContainerProps> = props => {
+  return (
+    <Fragment>
+      <CharityPanelContainer orgID={6026}>
+      </CharityPanelContainer>
     </Fragment>
   );
 }
 
-export default CharityPanelContainer;
+export default CharityPage;
