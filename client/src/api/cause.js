@@ -20,7 +20,8 @@ const getById = async (causeName) => {
                 pk: causeName
             }
         };
-        return await api.get('/cause', options);
+        const res = await api.get('/cause', options);
+        return res.data[0]; // returns inside an array for some reason
     } catch (err) { throw err }
 };
 

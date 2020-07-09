@@ -52,11 +52,11 @@ options = {
 
 // org.getOrgs().then(data => console.log(data));
 
-// charity.getById(6026).then(data => console.log(data));
+charity.getById(6026).then(data => console.log(data.organization.charityName));
 
-charity.getAll().then(Items => {
-    console.log(Items[6])
-});
+// charity.getAll().then(Items => {
+//     console.log(Items[6])
+// });
 
 // cause.getById('COVID19').then(data => console.log(data));
 // cause.getAll().then(data => console.log(data));
