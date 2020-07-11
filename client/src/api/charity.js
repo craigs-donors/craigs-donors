@@ -19,7 +19,8 @@ const getById = async (orgId) => {
                 pk: orgId
             }
         };
-        return await api.get('/charity', options);
+        const res = await api.get('/charity', options);
+        return res.data[0]; // returns inside an array for some reason
     } catch (err) { throw err }
 };
 
