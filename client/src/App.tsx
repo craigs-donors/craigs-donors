@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
 import TrendingPage from './pages/TrendingPage';
+import AboutPage from './pages/AboutPage'; 
+import CharitiesPage from './pages/CharitiesPage';
 import CharityPanelContainer from './components/CharityPanelContainer';
 import CharitiesPage from './pages/CharitiesPage';
 import Amplify, { Auth } from 'aws-amplify';
@@ -36,13 +38,9 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-
         {/* Testing of the Home Page */}
         <Route path="/test" component={CharitiesPage} exact={true} />
-
         <Route path="/home" component={Home} exact={true} />
-
-
         {/* Testing of the Donate Page */}
         <Route path="/donatepage" component={DonatePage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/donatepage" />} />
@@ -50,7 +48,21 @@ const App: React.FC = () => (
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />    
+        {/* Testing of the Trending Confirmation Page */}
+        <Route path="/trendingpage" component={TrendingPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
 
+        {/* Testing of the Donate Confirmation Page */}
+        <Route path="/aboutpage" component={AboutPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/aboutpage" />} />                
+
+        {/* Testing of the Donate Confirmation Page */}
+        <Route path="/charitiespage" component={CharitiesPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/charitiespage" />} />        
+
+        {/* Testing of the Home Page */}
+        <Route path="/home" component={Home} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />                        
         
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
