@@ -71,7 +71,7 @@ const Home: React.FC = () => {
         </IonGrid>
 
         {/* NB: Popular Causes Container here */} 
-        <PopularCausesContainer/
+        <PopularCausesContainer/>
 
       </IonContent>
 

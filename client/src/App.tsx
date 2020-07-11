@@ -9,7 +9,6 @@ import TrendingPage from './pages/TrendingPage';
 import AboutPage from './pages/AboutPage'; 
 import CharitiesPage from './pages/CharitiesPage';
 import CharityPanelContainer from './components/CharityPanelContainer';
-import CharitiesPage from './pages/CharitiesPage';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
