@@ -66,7 +66,6 @@ signOut = () => {
       <div>
       <AmplifyAuthenticator federated={federated}>
       <IonPage> 
-        
         <IonHeader translucent={true}>
         <IonToolbar class="toolbar-top">
           <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
@@ -87,7 +86,7 @@ signOut = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-        <IonContent>                                
+      <IonContent>                                
           {/* NB: Trending Items here */}
           <TrendingContainer/>
           {/* refresh the browser */}
@@ -95,7 +94,7 @@ signOut = () => {
             <IonRow class="row-style">
               <IonCol class="col-style"><IonText color="warning">Join</IonText> <IonText color="tertiary">Community</IonText></IonCol>
             </IonRow>
-  
+
             <IonRow>
               <IonCol class="col-style" size="8" offset="3">
               <IonItem class="search-input">
@@ -104,7 +103,7 @@ signOut = () => {
                 </IonItem>
               </IonCol>
             </IonRow>
-  
+
             <IonRow className="ion-justify-content-start">
               <IonCol size ="4" className="ion-align-self-start">
                 <div className="ion-text-center ion-padding">            
@@ -128,15 +127,15 @@ signOut = () => {
                 </div>
               </IonCol>
             </IonRow>
-  
+
             <IonRow class="row-style">
               <IonCol class="col-style"> <IonButton color="warning">See more</IonButton></IonCol>
             </IonRow>
-  
+
             <IonRow class="row-style">
               <IonCol class="col-style"><IonText color="warning">Can't find your community?!</IonText> <IonText color="tertiary">Create your own!</IonText></IonCol>
             </IonRow>
-  
+
           </IonGrid>  
           {/* NB: Create commmunity container here */}
           <CreateCommunityContainer />
