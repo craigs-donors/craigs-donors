@@ -30,8 +30,6 @@ const Home: React.FC = () => {
           <IonButtons slot="secondary">
             <IonButton color="primary" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>
             <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
-            <IonButton color="tertiary" expand="block" fill="clear" routerLink="/aboutpage">About Us</IonButton>
-            <IonButton color="dark" expand="block" fill="clear" routerLink="/charitiespage">Charities Page</IonButton>
             <IonButton color="tertiary" expand="block" fill="clear">About Us</IonButton>
             <IonButton size="large" fill="solid" color="tertiary" type="submit" href="/trendingpage">
               Sign in/Register
@@ -71,7 +69,10 @@ const Home: React.FC = () => {
         </IonGrid>
 
         {/* NB: Popular Causes Container here */} 
-        <PopularCausesContainer/
+        <PopularCausesContainer/>
+
+        
+
 
       </IonContent>
 
