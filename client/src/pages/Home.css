@@ -25,7 +25,7 @@
 
   .toolbar-top {
     color: black;
-    --background: #ffc409;
+    --background: #ffeaa7;
   }
 
   .btnsignup {
@@ -120,4 +120,8 @@
     /* color: black; */
     font-size: 50;
     color: red;
+  }
+
+  header_logo {
+    margin-top: 400px;
   }

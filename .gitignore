@@ -123,3 +123,6 @@ amplifyconfiguration.json
 amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
+src/pages/Home.tsx
+src/components/TrendingContainer.css
+src/components/TrendingContainer.tsx

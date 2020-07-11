@@ -16,11 +16,11 @@ const DonatePage: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar class="toolbar-top">
-          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="115" height="55" float-left src="./assets/images/CD.png"/></IonTitle>
+          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
 
           <IonButtons slot="secondary">
-            <IonButton color="primary" expand="block" fill="clear">Donate</IonButton>
-            <IonButton color="secondary" expand="block" fill="clear">Community</IonButton>
+            <IonButton color="primary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
+            <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
             <IonButton color="tertiary" expand="block" fill="clear">Support</IonButton>
           </IonButtons>
 
@@ -56,7 +56,7 @@ const DonatePage: React.FC = () => {
               <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$200</IonButton></IonCol>              
             </IonRow>            
             <IonRow class="row-style">              
-              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="warning">Pay with Amazon Pay</IonButton></IonCol>
+              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="warning" routerLink="/donateconfirmpage">Pay with Amazon Pay</IonButton></IonCol>
             </IonRow>                        
           </IonGrid>
 

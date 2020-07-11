@@ -16,7 +16,7 @@ const DonateConfirmPage: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar class="toolbar-top">
-          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="115" height="55" float-left src="./assets/images/CD.png"/></IonTitle>
+        <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
 
           <IonButtons slot="secondary">
             <IonButton color="primary" expand="block" fill="clear">Donate</IonButton>
@@ -52,10 +52,10 @@ const DonateConfirmPage: React.FC = () => {
               <IonCol class="col-style" size="4" offset="4" ><IonText>Join community to support <br/> Homeless Entrepreneur </IonText></IonCol>              
             </IonRow>           
             <IonRow class="row-style">              
-              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="warning">Join Community</IonButton></IonCol>              
+              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="warning" routerLink="/trendingpage">Join Community</IonButton></IonCol>              
             </IonRow>                        
             <IonRow class="row-style">              
-              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="primary" fill="clear">Return to Home Page</IonButton></IonCol>              
+              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="primary" fill="clear" routerLink="/home">Return to Home Page</IonButton></IonCol>              
             </IonRow>                                 
           </IonGrid>
 

@@ -8,7 +8,6 @@ import DonateConfirmPage from './pages/DonateConfirmPage';
 import TrendingPage from './pages/TrendingPage';
 import CharityPanelContainer from './components/CharityPanelContainer';
 import CharitiesPage from './pages/CharitiesPage';
-
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
@@ -43,7 +42,6 @@ const App: React.FC = () => (
 
         <Route path="/home" component={Home} exact={true} />
 
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
 
         {/* Testing of the Donate Page */}
         <Route path="/donatepage" component={DonatePage} exact={true} />
@@ -51,13 +49,18 @@ const App: React.FC = () => (
 
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />        
+        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />    
 
+        
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
+        <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />   
+        
+        
+        <Route path="/home" component={Home} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />     
 
-
+ 
 
       </IonRouterOutlet>
     </IonReactRouter>

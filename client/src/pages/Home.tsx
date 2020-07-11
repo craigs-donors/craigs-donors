@@ -1,159 +1,84 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIcon, IonButtons, IonList, 
-  IonItem, IonCard, IonCardContent, IonCardTitle, IonLabel, IonInput, IonImg } from '@ionic/react';
+  IonItem, IonCard, IonCardContent, IonCardTitle, IonLabel, IonInput, IonImg, IonToast } from '@ionic/react';
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
-  medkit, colorFill, heartHalf , languageSharp} from 'ionicons/icons';
-import React from 'react';
+  medkit, colorFill, heartHalf , languageSharp, logoFacebook, logoTwitter, logoInstagram} from 'ionicons/icons';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { withAuthenticator, AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types";
 import Amplify, { Auth } from 'aws-amplify';
 import './Home.css';
+import TrendingContainer from '../components/TrendingContainer';
+import PopularCausesContainer from '../components/PopularCausesContainer';
+import FooterContainer from '../components/FooterContainer';
 
-const federated = {
-  facebookAppId: '3278049522251731',
-  googleClientId: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
-  amazonClientId: '2p0l7o2lcnst4g39v9ktomaafp'
-};
+
+
+
+
 
 
 const Home: React.FC = () => {
+  const [showToast1, setShowToast1] = useState(false);
+
   return (
     <IonPage>
-      <IonHeader>
+     <IonHeader translucent={true}>
         <IonToolbar class="toolbar-top">
-          <IonTitle>Craig's Donors</IonTitle>          
-          {/* <IonTitle><img alt="logo" id="header_logo" height="40" float-left src="../assets/images/CD.png"/>Craig's Donors</IonTitle> */}
-          {/* <IonTitle><IonImg alt="Craigs Logo" src="../assests/images/CDN.png" />Craigs Donors</IonTitle> */}
+        <IonTitle size="small"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
           <IonButtons slot="secondary">
-            <IonButton color="primary" expand="block" fill="clear">About Us</IonButton>
-            <IonButton color="secondary" expand="block" fill="clear">Community</IonButton>
-            <IonButton color="tertiary" expand="block" fill="clear">Support</IonButton>
-          </IonButtons>
-
-          <IonButtons slot="primary">
-            <IonButton fill="solid">
-            <IonIcon slot="start" icon={personCircle} />
-              Login
-            </IonButton>
-            <IonButton fill="solid">
-            <IonIcon slot="start" icon={create} />
-              Register
-            </IonButton>                        
+            <IonButton color="primary" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>
+            <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
+            <IonButton color="tertiary" expand="block" fill="clear">About Us</IonButton>
+            <IonButton size="large" fill="solid" color="tertiary" type="submit" href="/trendingpage">
+              Sign in/Register
+            </IonButton> 
           </IonButtons>
         </IonToolbar>
       </IonHeader>
 
-      <IonContent>        
+      <IonContent>   
+        <IonGrid>
         <IonRow>
-          <IonCol>
-            <IonList lines="none" class="btn-container">
-              <IonItem>
-                <IonButton class="btnsignup" color="danger" onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google})}>Continue with Google</IonButton>            
-              </IonItem>
-
-              <IonItem>
-                <IonButton class="btnsignup" color="success" onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook})}>Continue with Facebook</IonButton>
-              </IonItem>                              
-            </IonList>
-          </IonCol>
-          <IonCol>
-
-          <AmplifyAuthenticator federated={federated}>
-              <div>
-                You are signed in!
-                <AmplifySignOut />
-              </div>
-          </AmplifyAuthenticator>
-
-          <IonItem class="btn-charity-login">
-                {/* Charity?<IonButton color="clear">Log in here</IonButton> */}
-                <IonText color="dark">Charity?</IonText><IonButton class="btn-charity" size="small" color="clear">Log in here</IonButton>
-            </IonItem>            
+          <IonCol size="8" offset="4" className="ion-align-self-center">
           </IonCol>
         </IonRow>
-                
-        <IonList class="list-trending">
-          <h1>Trending</h1>
-          <IonItem class="list-trending-item">
-            <IonRow>
-              <h2>How can we do most good with limited resources?</h2>              
-            </IonRow>                    
-            <IonRow>
-              <h3>#EffeciveAltruism</h3>              
-            </IonRow>
-          </IonItem>
-          <IonItem class="list-trending-item">
-          <IonRow>
-              <h2>Join me to fight COVID-19 in thirdworld!!!</h2>              
-            </IonRow>                    
-            <IonRow>
-              <h3>#COVID-19</h3>              
-            </IonRow>
-          </IonItem>
-          <IonItem class="list-trending-item">
-          <IonRow>
-              <h2>How can we do most good with limited resources?</h2>              
-            </IonRow>                    
-            <IonRow>
-              <h3>#EffeciveAltruism</h3>              
-            </IonRow>
-          </IonItem>
-        </IonList>
-
-        <IonText class="header-text">Popular causes</IonText>
+          </IonGrid>                     
+        {/* NB: Trending Items here */}
+        <TrendingContainer/>
+        {/* Social Buttons Below */}
+        <IonGrid>
         <IonRow>
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
-            <IonIcon slot="start" icon={languageSharp} />
-              Education
+          <IonCol size="4">
+            <IonButton size="large" fill="clear" color="tertiary">
+              <IonIcon slot="start" icon={logoFacebook} />
             </IonButton>
           </IonCol>
+          <IonCol size="4">
+            <IonButton size="large" fill="clear" color="primary">
+              <IonIcon slot="start" icon={logoTwitter} />
+            </IonButton>
+          </IonCol>
+          <IonCol size="4">
+            <IonButton size="large" fill="clear" color="warning">
+              <IonIcon slot="start" icon={logoInstagram} />
+            </IonButton>
+          </IonCol>
+        </IonRow>     
+        </IonGrid>
 
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
-            <IonIcon slot="start" icon={heartHalf} />
-              Mental Health
-            </IonButton>
-          </IonCol>
+        {/* NB: Popular Causes Container here */} 
+        <PopularCausesContainer/>
 
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
-            <IonIcon slot="start" icon={medkit} />
-              Health
-            </IonButton>
-          </IonCol>
+        
 
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
-            <IonIcon slot="start" icon={colorFill} />
-              Clean Water
-            </IonButton>
-          </IonCol>
-        </IonRow>
 
       </IonContent>
+
+      {/* NB: Footer container here */}
+      <FooterContainer/>            
       
-      <IonFooter>
-        <IonToolbar class="page-footer">      
-          <IonRow class="page-footer">
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Privacy</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Sitemap</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Terms</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Help</IonButton>
-            </IonCol>                              
-          </IonRow>
-
-        </IonToolbar>
-      </IonFooter>
-
     </IonPage>
   );
 };
