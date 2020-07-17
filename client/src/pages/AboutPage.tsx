@@ -21,7 +21,6 @@ const AboutPage: React.FC = () => {
           <IonButtons slot="secondary">
             <IonButton color="primary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
             <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
-            <IonButton color="tertiary" expand="block" fill="clear">About Us</IonButton>
           </IonButtons>
 
           <IonButtons slot="primary">
@@ -38,11 +37,12 @@ const AboutPage: React.FC = () => {
       <IonContent>                                
           <IonGrid class="display-grid">
             <IonRow class="row-style">
-              <IonCol class="col-style"><div>Meet the team</div></IonCol>
+              <IonCol class="col-style"><h1>Meet the team</h1></IonCol>
             </IonRow>
             <IonRow class="row-style">
               <IonCol></IonCol>
-              <IonImg class="img-charity" src="./assets/images/craigsdonors_logo.png" />
+              {/* <IonImg src="./assets/images/AboutPageImg.png" /> */}
+              <img alt="logo" id="header_logo" width="350" height="350" float-left src="./assets/images/AboutPageImg.png"/>             
               <IonCol></IonCol>              
             </IonRow>
             <IonRow class="row-style">
