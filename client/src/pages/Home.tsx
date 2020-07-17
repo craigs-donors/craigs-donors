@@ -51,6 +51,12 @@ const Home: React.FC = () => {
         {/* Social Buttons Below */}
         <IonGrid>
         <IonRow>
+          <IonCol size = "12" offset="5"> 
+            <h1>Follow us on social media</h1>
+          </IonCol>          
+        </IonRow>
+
+        <IonRow>
           <IonCol size="3" offset="3">
             <IonButton size="large" fill="clear" color="tertiary">
               <IonIcon slot="start" icon={logoFacebook} />
