@@ -18,7 +18,7 @@ Amplify.configure(awsconfig);
 const federated = {
   facebookAppId: '3278049522251731',
   googleClientId: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
-  amazonClientId: '2p0l7o2lcnst4g39v9ktomaafp'
+  amazonClientId: 'amzn1.application-oa2-client.8cf9bd69177448d68202fcdfe231916e'
 };
 interface Props {
 }
