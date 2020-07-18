@@ -162,3 +162,8 @@
   .btn-donate {
     width: 150px;
   }
+
+  .card-style {
+    position: relative;
+    text-align: center;
+  }

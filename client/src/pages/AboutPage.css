@@ -123,8 +123,7 @@
   .img-charity {
     height: 500px;
     width: 500px;    
-    /* min-height: 1px !important; */
-    background-color: black;
+    background-color: white;
   }
 
 
