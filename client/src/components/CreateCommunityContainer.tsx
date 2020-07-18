@@ -42,7 +42,7 @@ const CreateCommunityContainer: React.FC<ContainerProps> = () => {
       <br/ >
       <IonRow>
         <IonCol class="col-style" size="8" offset="3">          
-          <IonButton color="warning" size="large">Create</IonButton>
+          <IonButton color="warning" size="large" routerLink="/donateconfirmpage">Create</IonButton>
         </IonCol>                   
       </IonRow>
 

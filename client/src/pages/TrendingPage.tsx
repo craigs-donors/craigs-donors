@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIcon, IonButtons, IonList, 
   IonItem, IonCard, IonCardContent, IonCardTitle, IonLabel, IonInput, IonImg, IonThumbnail } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
-    medkit, colorFill, heartHalf , languageSharp, notifications } from 'ionicons/icons';
+    medkit, colorFill, heartHalf , languageSharp, notifications, searchCircleSharp, searchSharp } from 'ionicons/icons';
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -71,8 +71,8 @@ signOut = () => {
           <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
 
           <IonButtons slot="secondary">
-          <IonButton color="primary" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>
-            <IonButton color="secondary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
+          <IonButton color="secondary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
+          <IonButton color="primary" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>            
             <IonButton color="tertiary" expand="block" fill="clear" routerLink="/aboutpage">About Us</IonButton>
           </IonButtons>
 
@@ -98,33 +98,54 @@ signOut = () => {
             <IonRow>
               <IonCol class="col-style" size="8" offset="3">
               <IonItem class="search-input">
-                <IonInput type="text" placeholder="Search" clear-input="true" required></IonInput>
+                <IonInput type="text" placeholder="Search" clear-input="true" required><IonIcon slot="start" icon={searchSharp} /></IonInput>
                   <IonButton color="success" size="large">Go</IonButton>              
                 </IonItem>
               </IonCol>
             </IonRow>
-
-            <IonRow className="ion-justify-content-start">
-              <IonCol size ="4" className="ion-align-self-start">
-                <div className="ion-text-center ion-padding">            
-                    <img src="./assets/images/CoV-2.png" width="150" height="160"/>   
+  
+            <IonRow>
+              <IonCol size ="4">
+                <IonCard class="card-style">
+                <img src="./assets/images/CoV-2.png" width="150" height="160"/>
+                  <IonCardContent>
+                    <IonCardTitle>
                     COVID-19
+                      </IonCardTitle>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio aperiam dolorum laboriosam dolor ipsum optio ut perspiciatis praesentium? Repellendus, aspernatur.
+                    </p>
                     <IonButton color="warning">Join</IonButton>
-                </div>
+                  </IonCardContent>
+                </IonCard>                
               </IonCol>
-              <IonCol size ="4" className="ion-align-self-start">
-              <div className="ion-text-center ion-padding">
-                    <img src="./assets/images/PngItem_424709.png" width="150" height="160" /> 
+              <IonCol size ="4">
+                <IonCard class="card-style">
+                <img src="./assets/images/PngItem_424709.png" width="150" height="160" /> 
+                  <IonCardContent>
+                    <IonCardTitle>
                     EffectiveAltruism
+                      </IonCardTitle>
+                    <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio aperiam dolorum laboriosam dolor ipsum optio ut perspiciatis praesentium? Repellendus, aspernatur.
+                    </p>
                     <IonButton color="warning">Join</IonButton>
-                </div>
+                  </IonCardContent>
+                </IonCard>                
               </IonCol>
-              <IonCol size ="4" className="ion-align-self-start">
-              <div className="ion-text-center ion-padding">
-                    <img src="./assets/images/PngItem_923687.png" width="150" height="160" />
+              <IonCol size ="4">
+                <IonCard class="card-style">
+                <img src="./assets/images/PngItem_923687.png" width="130" height="160" />
+                  <IonCardContent>
+                    <IonCardTitle>
                     Sustainability
+                      </IonCardTitle>
+                    <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio aperiam dolorum laboriosam dolor ipsum optio ut perspiciatis praesentium? Repellendus, aspernatur.
+                    </p>
                     <IonButton color="warning">Join</IonButton>
-                </div>
+                  </IonCardContent>
+                </IonCard>                
               </IonCol>
             </IonRow>
 
