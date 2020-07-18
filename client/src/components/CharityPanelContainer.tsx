@@ -17,7 +17,7 @@ const CharityPanelContainer: React.FC<CharityPanelContainerProps> = props => {
   const [ data, setData ] = useState(undefined);
   const [ error, setError ] = useState(undefined);
   
-  !(data || error) && charity.getById(props.orgID).then(setData).catch(setError);
+  //!(data || error) && charity.getById(props.orgID).then(setData).catch(setError);
   
   return (
     <Fragment>

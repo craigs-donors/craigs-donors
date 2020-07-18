@@ -124,7 +124,7 @@
     height: 300px;
     width: 300px;    
     /* min-height: 1px !important; */
-    background-color: black;
+    background-color: black !important;
   }
 
 
