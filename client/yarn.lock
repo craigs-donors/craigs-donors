@@ -2394,6 +2394,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify/react@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.3.tgz#ebe4d3e5f5dea23cd6a9634acd7a0a25c7414a59"
+  integrity sha512-ReZNJyr89AfED6XZIXkhsJiNv2taT3j1cTo1HVPHMsrKOz6gAYdXtD2kDWF6+GVoFUxpmnO0fMcA6yCyTf6Tow==
+
 "@ionic/cli-framework-prompts@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@ionic/cli-framework-prompts/-/cli-framework-prompts-2.1.3.tgz#e2777daa9e7ad6c5dbc8979f3b753f8d219b9c1c"
