@@ -42,7 +42,7 @@ const CharitiesPage: React.FC<CharitiesPageProps> = props => {
                     <IonButtons slot="secondary">
                       <IonButton color="primary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
                       <IonButton color="dark" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>                      
-                      <IonButton color="danger" expand="block" fill="clear" href="./assets/external/DashboardPage.html">Dashboard</IonButton>
+                      <IonButton color="danger" expand="block" fill="clear" href="./assets/external/DashboardPage.html" target="_blank">Dashboard</IonButton>
                       <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
                       <IonButton color="tertiary" expand="block" fill="clear">About Us</IonButton>
                     </IonButtons>
