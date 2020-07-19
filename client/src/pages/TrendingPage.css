@@ -166,4 +166,5 @@
   .card-style {
     position: relative;
     text-align: center;
+    --background: #ffeaa7;
   }

@@ -66,7 +66,7 @@ const TrendingContainer: React.FC<ContainerProps> = () => {
             </IonCardTitle>
             <IonRow>
                 <IonCol size="4">#SAVEOURPLANET</IonCol>
-                  <IonCol size="4">977 Replies</IonCol>
+                  <IonCol size="4">97 Replies</IonCol>
                   <IonCol size="4">
                     <IonButton color="tertiary" size="small">Join Discussion</IonButton>
                 </IonCol>                        

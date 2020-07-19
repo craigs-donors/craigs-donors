@@ -38,9 +38,15 @@ const Home: React.FC = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-
+      
       <IonContent>   
         <IonGrid>
+        <IonRow>
+          <IonCol size = "4" offset="4"> 
+            <img alt="logo" id="header_logo" width="1200" height="250" float-left src="https://www.tommysteam.com/images/blog/PEOPLE-HELPING-PEOPLE-607x270.jpg"/>
+          </IonCol>          
+        </IonRow>
+
         <IonRow>
           <IonCol size="8" offset="4" className="ion-align-self-center">
           </IonCol>

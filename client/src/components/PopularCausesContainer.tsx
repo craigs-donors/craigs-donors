@@ -22,34 +22,33 @@ const PopularCausesContainer: React.FC<ContainerProps> = () => {
   return (
     <IonGrid>
     <IonRow>
-      <IonCol offset="5"> 
+      <IonCol size="12" offset="5">
         <h1>Popular Causes</h1>
       </IonCol>          
     </IonRow>
 
     <IonRow>
       <IonCol size="3">
-        <IonButton class="btn-popular-causes" expand="full" fill="solid">
-          <Icon icon={educationIcon} width={32} height={32} color="#f00"/>
+        <IonButton class="btn-popular-causes" expand="full" fill="clear">
+          <Icon icon={educationIcon} width={32} height={32} color="#fff"/>
           Education
         </IonButton>
       </IonCol>
       <IonCol size="3">
-      <IonButton class="btn-popular-causes" expand="full" fill="solid">
-          <Icon icon={mentalHealthFill} width={32} height={32} color="#f00"/>
+      <IonButton class="btn-popular-causes" expand="full" fill="clear">
+          <Icon icon={mentalHealthFill} width={32} height={32} color="#fff"/>
           Mental Health
         </IonButton>
       </IonCol>
       <IonCol size="3">
-      <IonButton class="btn-popular-causes" expand="full" fill="solid">
-          <Icon icon={healthServices} width={32} height={32} color="#f00"/>
+      <IonButton class="btn-popular-causes" expand="full" fill="clear">
+          <Icon icon={healthServices} width={32} height={32} color="#fff"/>
           Health
         </IonButton>
       </IonCol>
       <IonCol size="3">
       <IonButton class="btn-popular-causes" expand="full" fill="clear">
-          {/* <IonIcon slot="start" icon={colorFill} /> */}
-          <Icon icon={handHoldingWater} width={32} height={32} color="#f00"/>
+          <Icon icon={handHoldingWater} width={32} height={32} color="#fff"/>
           Clean Water
       </IonButton>
       </IonCol>

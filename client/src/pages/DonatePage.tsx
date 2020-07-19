@@ -16,7 +16,7 @@ const DonatePage: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar class="toolbar-top">
-          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
+          <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="120" height="55" background-color="black" float-left src="./assets/images/craigsdonors_logo.png"/></IonTitle>
 
           <IonButtons slot="secondary">
             <IonButton color="primary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
@@ -29,7 +29,7 @@ const DonatePage: React.FC = () => {
             <IonIcon slot="start" icon={notifications} />
             </IonButton>
             <IonButton size="large" fill="solid" color="tertiary">
-              James Cook
+              Sign out
             </IonButton>                        
           </IonButtons>
         </IonToolbar>
@@ -39,11 +39,6 @@ const DonatePage: React.FC = () => {
           <IonGrid class="display-grid">
             <IonRow class="row-style">
               <IonCol class="col-style"><div>Donate to Homeless Entrepreneur</div></IonCol>
-            </IonRow>
-            <IonRow class="row-style">
-              <IonCol></IonCol>
-              <IonImg class="img-charity" src="./assets/images/homeless_entrepreneur.png" />
-              <IonCol></IonCol>              
             </IonRow>
             <IonRow class="row-style">
               <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_5.html">$5</IonButton></IonCol>
@@ -58,17 +53,9 @@ const DonatePage: React.FC = () => {
             <IonRow class="row-style">              
               <IonCol class="col-style" size="4" offset="4" >
                 <IonButton size="large" color="warning" routerLink="/donateconfirmpage">
-                <IonIcon slot="start" icon={logoAmazon} />Pay with Amazon Pay
+                <IonIcon slot="start" icon={logoAmazon} />Donate  with Amazon Pay
                 </IonButton>
               </IonCol>
-              {/* <IonCol class="col-style" size="4" offset="4" >
-                <IonButton size="large" color="warning" href="./assets/external/amazonpay.html">
-                <IonIcon slot="start" icon={logoAmazon} />Pay with Amazon Pay
-                </IonButton>
-              </IonCol>               */}
-
-              
-
             </IonRow>                        
           </IonGrid>
 
