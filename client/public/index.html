@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ionic App</title>
+
+    <base href="/" />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="shortcut icon" type="image/png" href="%PUBLIC_URL%/assets/icon/favicon.png" />
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Ionic App" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+      (function(d, m){
+        var kommunicateSettings = {"appId":"10c77f9d9508537b64fa8b8c9f623ea96","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+      })(document, window.kommunicate || {});
+  </script>
+  </body>
+
+</html>
