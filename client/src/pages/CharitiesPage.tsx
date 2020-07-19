@@ -7,7 +7,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIco
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import FooterContainer from '../components/FooterContainer';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
-  medkit, colorFill, heartHalf , languageSharp, notifications } from 'ionicons/icons';
+  medkit, colorFill, heartHalf , languageSharp, notifications, logoAmazon } from 'ionicons/icons';
 interface CharitiesPageProps {
 
 };
@@ -41,6 +41,8 @@ const CharitiesPage: React.FC<CharitiesPageProps> = props => {
 
                     <IonButtons slot="secondary">
                       <IonButton color="primary" expand="block" fill="clear" routerLink="/home">Home</IonButton>
+                      <IonButton color="dark" expand="block" fill="clear" routerLink="/donatepage">Donate</IonButton>                      
+                      <IonButton color="danger" expand="block" fill="clear" href="./assets/external/DashboardPage.html">Dashboard</IonButton>
                       <IonButton color="secondary" expand="block" fill="clear" routerLink="/trendingpage">Community</IonButton>
                       <IonButton color="tertiary" expand="block" fill="clear">About Us</IonButton>
                     </IonButtons>
@@ -50,7 +52,7 @@ const CharitiesPage: React.FC<CharitiesPageProps> = props => {
                       <IonIcon slot="start" icon={notifications} />
                       </IonButton>
                       <IonButton size="large" fill="solid" color="tertiary">
-                        James Cook
+                        Sign out
                       </IonButton>                        
                     </IonButtons>
                   </IonToolbar>
@@ -59,29 +61,27 @@ const CharitiesPage: React.FC<CharitiesPageProps> = props => {
                 <IonContent>                                
                     <IonGrid class="display-grid">
                       <IonRow class="row-style">
-                        <IonCol class="col-style"><div>Welcome to Craig's Donor (Charity Name)</div></IonCol>
+                        <IonCol class="col-style"><div>Welcome to Craig's Donor - The Homeless Entrepreneur</div></IonCol>
                       </IonRow>
                       <IonRow class="row-style">
                         <IonCol></IonCol>
-                        <IonImg class="img-charity" src="./assets/images/craigsdonors_logo.png" />
+                        <IonImg class="img-charity" src="https://images.squarespace-cdn.com/content/5a0b0d34d7bdce6238e25913/1550338990561-KG0FK6GR295UGZEHEM7A/logo_he_negativo_v1.png?content-type=image%2Fpng" />
                         <IonCol></IonCol>              
                       </IonRow>
                       <IonRow class="row-style">
-                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maxime soluta ut porro doloremque quo quisquam 
-                          ratione nesciunt, quis, dicta quod incidunt exercitationem eveniet recusandae amet laboriosam nisi in architecto 
-                          excepturi ea perferendis natus iste tempora. Ex repellendus cupiditate excepturi dolor natus necessitatibus minima 
-                          cumque corrupti quas, ea magnam accusantium pariatur voluptates praesentium deleniti odit dolorem. Sunt nulla excepturi 
-                          voluptatum doloremque suscipit officia fugiat modi, expedita perferendis optio assumenda facilis. Veritatis maxime 
-                          error fuga voluptatibus, vitae qui provident eaque magni. Illum, sit! Ad expedita, qui quaerat eveniet illum nulla 
-                          quisquam quo magnam quam unde ipsam eius iure amet ipsa repudiandae fuga! Itaque vel deleniti quibusdam saepe rerum 
-                          expedita dolores incidunt voluptatibus, nisi nam hic vitae, quidem sunt ea, amet magni sint eveniet ex est omnis beatae. 
-                          Doloribus sapiente similique, ullam veniam voluptatem suscipit tempora a nobis quibusdam sit, animi aut nihil illo unde 
-                          odio fuga libero vitae et sunt veritatis qui enim ipsam! Ad illum esse qui aspernatur quasi, doloribus modi. Alias 
-                          delectus cumque facilis temporibus cupiditate similique numquam excepturi laborum quasi nesciunt adipisci, beatae ad. 
-                          Voluptas eligendi temporibus recusandae praesentium, possimus ratione vero perferendis. Voluptate, dolorem. Praesentium 
-                          totam laudantium quibusdam ducimus tempore voluptate soluta repellendus at ipsam, beatae sequi.
+                        <h1>Homeless Entrepreneur’s mission is to promote economic empowerment and poverty reduction via work and 
+                          active citizenship, so people living in social exclusion can improve their quality of life. We believe every citizen 
+                          has the opportunity to participate regardless of age, gender, sexual preference, political alliance, or religious 
+                          belief. We invite everyone to join us in our mission. 
                         </h1>              
-                      </IonRow>                      
+                      </IonRow>      
+                      <IonRow class="row-style">              
+                        <IonCol class="col-style" size="4" offset="4" >
+                          <IonButton size="large" color="warning" routerLink="/donatepage">
+                          <IonIcon slot="start" icon={logoAmazon} />Donate with Amazon Pay
+                          </IonButton>
+                        </IonCol>
+                      </IonRow>                                                              
                     </IonGrid>
 
                 </IonContent>
