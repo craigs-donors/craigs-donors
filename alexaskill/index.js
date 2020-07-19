@@ -12,7 +12,7 @@ const Purpose = {
     " Purpose is providing opportunities for law students and lawyers to work with organizations that deliver civil legal services to those most in need."
     ],
   nonprofitslist: [
-    " Here are some of the nonprofits :equaljusticeamerica,thelark,ahrcnewyorkcityfoundation."
+    " Here are some of the nonprofits I recommend for donation : equaljusticeamerica,thelark,ahrcnewyorkcityfoundation."
     ]
 };
 
@@ -22,7 +22,7 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === "LaunchRequest";
   },
   handle(handlerInput) {
-    const speechText = "Hello, I am Craigs. I will be your Virtual Assistant informing you on non profits!, You can ask me to give you list of non profits";
+    const speechText = "Hello, I am Craigs Donor. I can give you the recommended list of non profits. You can say ask craigs donor on nonprofitslist ";
     const repromptText = "You can ask me more information, how can I help?";
 
     // Speak out the speechText via Alexa
@@ -33,28 +33,7 @@ const LaunchRequestHandler = {
   }
 };
 
-//Handler for NonProfits List
-const NonProfitsInfo= {
-  canHandle(handlerInput) {
-    return (
-      handlerInput.requestEnvelope.request.type === "IntentRequest" &&
-      handlerInput.requestEnvelope.request.intent.name === "NonProfitsInfo"
-    );
-  },
-  handle(handlerInput) {
-    console.log("non profit  info Intent handler called");
 
-    // Get the nonprofit name
-
-    let nonprofitsinfo = "equalAmerica";
-
-   let speechText =  "here is the list of " + nonprofitsinfo;
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .getResponse();
-  }
-};
 //Handler for NonProfits
 const NonProfitsPurpose= {
   canHandle(handlerInput) {
