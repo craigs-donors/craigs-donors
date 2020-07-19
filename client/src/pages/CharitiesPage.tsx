@@ -63,10 +63,7 @@ const CharitiesPage: React.FC<CharitiesPageProps> = props => {
                       <IonRow class="row-style">
                         <IonCol class="col-style"><div>Welcome to Craig's Donor - The Homeless Entrepreneur</div></IonCol>
                       </IonRow>
-                      <IonRow class="row-style">
-                        <IonCol></IonCol>
-                        <IonImg class="img-charity" src="https://images.squarespace-cdn.com/content/5a0b0d34d7bdce6238e25913/1550338990561-KG0FK6GR295UGZEHEM7A/logo_he_negativo_v1.png?content-type=image%2Fpng" />
-                        <IonCol></IonCol>              
+                      <IonRow class="row-style">             
                       </IonRow>
                       <IonRow class="row-style">
                         <h1>Homeless Entrepreneur’s mission is to promote economic empowerment and poverty reduction via work and 

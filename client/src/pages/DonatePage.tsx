@@ -40,13 +40,6 @@ const DonatePage: React.FC = () => {
             <IonRow class="row-style">
               <IonCol class="col-style"><div>Donate to Homeless Entrepreneur</div></IonCol>
             </IonRow>
-            <IonRow>
-              <IonCol></IonCol>
-              <IonCol class="logo-style">
-                <IonImg src="https://static1.squarespace.com/static/5a0b0d34d7bdce6238e25913/t/5c684baea4222f337814efae/1594812569973/?format=1500w" />
-              </IonCol>
-              <IonCol></IonCol>              
-            </IonRow>
             <IonRow class="row-style">
               <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_5.html">$5</IonButton></IonCol>
               <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$10</IonButton></IonCol>
