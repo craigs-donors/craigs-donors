@@ -38,3 +38,9 @@ Finally,
 should return JSON.
 
 See `scripts` in `package.json` for details on these launch scripts.
+
+## Authentication
+
+We used AWS Cognito to authenticate donors and charities - they are different groups in Cognito User Pool
+
+![alt text](https://github.com/craigs-donors/craigs-donors/client/src/assets/images/authentication.png)
