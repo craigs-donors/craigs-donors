@@ -39,8 +39,17 @@ should return JSON.
 
 See `scripts` in `package.json` for details on these launch scripts.
 
-## Authentication
 
-We used AWS Cognito to authenticate donors and charities - they are different groups in Cognito User Pool
+## Authentication
+An unauthenticated user gets this landing page
+![](https://github.com/craigs-donors/craigs-donors/blob/master/client/src/assets/images/landing.png)
+
+We used AWS Cognito to authenticate donors and charities - they are different groups in Cognito User Pool, Based on whether they are a donor or a charity, they get different screens where they can either make a donation (donor) or visualize the donations (charity). 
 
 ![](https://github.com/craigs-donors/craigs-donors/blob/master/client/src/assets/images/authentication.png)
+
+They can either authenticate via federated identities like Facebook, Google, Amazon or the direct Sign up Form. 
+
+## Netlify
+
+As we developed new features in several branches, we integrated our github with netlify so all PRs would first deploy to netlify and once the deploy and tests passed, we merged them to master. That way we would make sure that our changes were not breaking earlier features.
