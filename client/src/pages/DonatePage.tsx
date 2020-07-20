@@ -41,14 +41,21 @@ const DonatePage: React.FC = () => {
               <IonCol class="col-style"><div>Donate to Homeless Entrepreneur</div></IonCol>
             </IonRow>
             <IonRow class="row-style">
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_5.html">$5</IonButton></IonCol>
+                        <h1>Homeless Entrepreneur’s mission is to promote economic empowerment and poverty reduction via work and 
+                          active citizenship, so people living in social exclusion can improve their quality of life. We believe every citizen 
+                          has the opportunity to participate regardless of age, gender, sexual preference, political alliance, or religious 
+                          belief. We invite everyone to join us in our mission. 
+                        </h1>              
+            </IonRow>  
+            <IonRow class="row-style">
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$5</IonButton></IonCol>
               <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$10</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_20.html">$20</IonButton></IonCol>              
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$20</IonButton></IonCol>              
             </IonRow>
             <IonRow class="row-style">
-            <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_50.html">$50</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_100.html">$100</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_200.html">$200</IonButton></IonCol>              
+            <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$50</IonButton></IonCol>
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$100</IonButton></IonCol>
+              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning" href="./assets/external/amazonpay_10.html">$200</IonButton></IonCol>              
             </IonRow>            
             <IonRow class="row-style">              
               <IonCol class="col-style" size="4" offset="4" >
