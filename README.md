@@ -53,3 +53,5 @@ They can either authenticate via federated identities like Facebook, Google, Ama
 ## Netlify
 
 As we developed new features in several branches, we integrated our github with netlify so all PRs would first deploy to netlify and once the deploy and tests passed, we merged them to master. That way we would make sure that our changes were not breaking earlier features.
+
+![](https://github.com/craigs-donors/craigs-donors/blob/master/client/src/assets/images/netlify.png)
