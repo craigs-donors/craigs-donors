@@ -42,7 +42,6 @@ const DonateConfirmPage: React.FC = () => {
             </IonRow>
             <IonRow class="row-style">
               <IonCol></IonCol>
-              <IonImg class="img-charity" src="./assets/images/homeless_entrepreneur.png" />
               <IonCol></IonCol>              
             </IonRow>
             <IonRow class="row-style">              
