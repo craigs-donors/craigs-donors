@@ -64,7 +64,9 @@ Login to ECR:
 aws ecr get-login --no-include-email --region us-east-1
 
 Tag & push  the Docker Image
+
 docker tag craigshelp:latest 453101909370.dkr.ecr.us-east-1.amazonaws.com/craigs:1.0
+
 docker push 453101909370.dkr.ecr.us-east-1.amazonaws.com/craigs:1.0
 
 ### Deploy as ECS Service
