@@ -83,7 +83,7 @@ Right now we are deplpoying the service manually, future enchancments include ha
 
 We have created an ALB and associated ACM with it for https
 
-(https://github.com/craigs-donors/craigs-donors/blob/readme_update/Images/ALB.png)
+![](https://github.com/craigs-donors/craigs-donors/blob/readme_update/Images/ALB.png)
 
 ### Validation
 Once the service  is running,
