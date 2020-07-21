@@ -27,17 +27,6 @@ This app consists of two concurrent servers: React.js runs one on 3000, and Expr
 ## To run both concurrently for full app features:
 ```npm run dev```
 
-## To build and package the app for deployment:
-```npm run heroku-postbuild```
-TODO configure for Netlify, not Heroku?
-
-## To test DynamoDB endpoint with Node.js script:
-Open `test/testGetItem.js` then **edit the `params` variable as necessary for your particular dynamodb configuration, i.e. tables, primary keys, etc.**
-Finally, 
-```node test/testGetItem.js```
-should return JSON.
-
-See `scripts` in `package.json` for details on these launch scripts.
 
 
 ## Authentication
@@ -55,3 +44,36 @@ They can either authenticate via federated identities like Facebook, Google, Ama
 As we developed new features in several branches, we integrated our github with netlify so all PRs would first deploy to netlify and once the deploy and tests passed, we merged them to master. That way we would make sure that our changes were not breaking earlier features.
 
 ![](https://github.com/craigs-donors/craigs-donors/blob/master/client/src/assets/images/netlify.png)
+
+
+## Dockerizing App
+
+Ensure you have docker on your machine.
+https://docs.docker.com/get-docker/
+
+Create Docker Image by running the below command
+docker build -t craigshelp .
+
+Test the locally built docker image:
+
+docker run -p 3000:3000 -d {container_id}
+Run localhost:3000 in your browser
+
+### Push Docker Image to ECR
+Login to ECR:
+aws ecr get-login --no-include-email --region us-east-1
+
+Tag & push  the Docker Image
+docker tag craigshelp:latest 453101909370.dkr.ecr.us-east-1.amazonaws.com/craigs:1.0
+docker push 453101909370.dkr.ecr.us-east-1.amazonaws.com/craigs:1.0
+
+### Deploy as ECS Service
+Right now we are deplpoying the service manually, future enchancments include having a CICD pipleine to deploy and run the ECS task.
+
+We have created an ALB and associated ACM with it for https
+
+![](https://github.com/craigs-donors/craigs-donors/blob/readme_update/Images/ALB.png)
+
+### Validation
+Once the service  is running,
+launch: https://craigsdonor.com 
