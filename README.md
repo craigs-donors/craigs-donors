@@ -27,17 +27,6 @@ This app consists of two concurrent servers: React.js runs one on 3000, and Expr
 ## To run both concurrently for full app features:
 ```npm run dev```
 
-## To build and package the app for deployment:
-```npm run heroku-postbuild```
-TODO configure for Netlify, not Heroku?
-
-## To test DynamoDB endpoint with Node.js script:
-Open `test/testGetItem.js` then **edit the `params` variable as necessary for your particular dynamodb configuration, i.e. tables, primary keys, etc.**
-Finally, 
-```node test/testGetItem.js```
-should return JSON.
-
-See `scripts` in `package.json` for details on these launch scripts.
 
 
 ## Authentication
